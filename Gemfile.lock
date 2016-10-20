@@ -26,7 +26,7 @@ GIT
       staccato
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     CFPropertyList (2.3.3)
     actionmailer (4.2.3)
@@ -239,6 +239,7 @@ GEM
       activesupport (>= 4.1.0)
     haml (4.0.7)
       tilt
+    hashie (3.4.4)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     httpclient (2.8.2.4)
@@ -272,6 +273,9 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    omniauth (1.2.2)
+      hashie (>= 1.2, < 4)
+      rack (~> 1.0)
     orm_adapter (0.5.0)
     pg (0.18.4)
     pkg-config (1.1.7)
@@ -376,6 +380,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  omniauth
   pg
   rails (= 4.2.3)
   sass-rails (~> 5.0)

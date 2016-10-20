@@ -27,7 +27,7 @@ Things you may want to cover:
 How To Start a SwellMedia Project
 * fork a swell_media_starter repo
 * create a postgres DB
-* update database.yml db config
+* update database.yml db config & ENV files with pertinent config options
 
 
 Please feel free to use a different markup language if you do not plan to run
