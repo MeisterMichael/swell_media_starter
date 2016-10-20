@@ -23,13 +23,10 @@ default: &default
 
 development:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
   database: <%= ENV["DEV_DATABASE"] || 'swell_media_starter_development' %>
-  pool: 5
   username: <%= ENV["DEV_DATABASE_USERNAME"] || 'postgres' %>
-  password: <%= ENV["DEV_DATABASE_PASSWORD"] || 'test1234' %>
-  host: <%= ENV["DEV_DATABASE_HOST"] || '127.0.0.1' %>
+  password: <%= ENV["DEV_DATABASE_PASSWORD"] %>
+  host: <%= ENV["DEV_DATABASE_HOST"] || 'localhost' %>
   port: <%= ENV["DEV_DATABASE_PORT"] || '5432' %>
 
   # The specified database role being used to connect to postgres.
