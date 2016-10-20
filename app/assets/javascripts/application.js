@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require swell_media/bootstrap/bootstrap.min
 //= require_tree .
