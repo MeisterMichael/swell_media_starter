@@ -24,11 +24,12 @@ Things you may want to cover:
 * ...
 
 
-How To Start a SwellMedia Project
+Getting Started
 * fork a swell_media_starter repo
 * create a postgres DB
 * update database.yml db config & ENV files with pertinent config options
-
+* run: $ bundle install
+* run rails app, go to http://localhost:3000/
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
