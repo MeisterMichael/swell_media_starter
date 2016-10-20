@@ -27,7 +27,7 @@ development:
   encoding: unicode
   database: <%= ENV["DEV_DATABASE"] || 'swell_media_starter_development' %>
   pool: 5
-  username: postgres
+  username: <%= ENV["DEV_DATABASE_USERNAME"] || 'postgres' %>
   password: <%= ENV["DEV_DATABASE_PASSWORD"] || 'test1234' %>
   host: <%= ENV["DEV_DATABASE_HOST"] || '127.0.0.1' %>
   port: <%= ENV["DEV_DATABASE_PORT"] || '5432' %>
@@ -64,7 +64,13 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: swell_media_starter_test
+  encoding: unicode
+  database: <%= ENV["TEST_DATABASE"] || 'swell_media_starter_test' %>
+  pool: 5
+  username: <%= ENV["DEV_DATABASE_USERNAME"] || 'postgres' %>
+  password: <%= ENV["DEV_DATABASE_PASSWORD"] || 'test1234' %>
+  host: <%= ENV["DEV_DATABASE_HOST"] || '127.0.0.1' %>
+  port: <%= ENV["DEV_DATABASE_PORT"] || '5432' %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -87,6 +93,5 @@ test:
 #
 production:
   <<: *default
-  database: swell_media_starter_production
-  username: swell_media_starter
-  password: <%= ENV['SWELL_MEDIA_STARTER_DATABASE_PASSWORD'] %>
+  url:  <%= ENV["DATABASE_URL"] %>
+  pool: <%= ENV["DATABASE_POOL"] || 14 %>
