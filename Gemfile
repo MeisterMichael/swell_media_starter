@@ -32,13 +32,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'carrierwave_direct'
 gem 'omniauth'
 
 # dev
-# gem 'swell_media', path: '../../engines/swell_media'
+gem 'swell_media', path: '../../engines/swell_media'
 
 # prod
-gem 'swell_media', git: 'git://github.com/playswell/swell_media.git', branch: 'refact'
+# gem 'swell_media', git: 'git://github.com/playswell/swell_media.git', branch: 'refact'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
