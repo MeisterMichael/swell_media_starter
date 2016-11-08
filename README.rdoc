@@ -34,6 +34,10 @@ Getting Started
 	$ rake db:setup
 * run rails app, go to http://localhost:3000/
 
+Optional
+* Configure Carrierwave S3 parameters, for asset management.
+	AMZN_ASOC_KEY, AMZN_ASOC_SECRET, FOG_DIRECTORY (bucket, e.g. 'shopswell-com-dev'), ASSET_HOST (if using cloudfront or similar)
+
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
