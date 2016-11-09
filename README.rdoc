@@ -33,6 +33,7 @@ Getting Started
 * build database
 	$ rake db:setup
 * run rails app, go to http://localhost:3000/
+* update your swell_media configuration (config/initializers/swell_media.rb)
 
 Optional
 * Configure Carrierwave S3 parameters, for asset management.
@@ -41,3 +42,26 @@ Optional
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+
+Files I generated
+app/controllers/application.rb
+app/models/user.rb
+config/initializers/carrierwave.rb
+config/initializers/devise.rb
+
+Files I modified
+config/database.yml
+config/routes.rb
+
+
+Copied files
+app/controllers/swell_media/static_controller.rb
+app/views/layouts/swell_media/articles.html.haml
+app/views/layouts/swell_media/homepage.html.haml
+app/views/layouts/swell_media/pages.html.haml
+app/views/layouts/application.html.haml
+app/views/layouts/session.html.haml
+app/views/swell_media/static/home.html.haml
+config/initializers/swell_media.rb

@@ -3,6 +3,7 @@ module SwellMedia
 
 		def home
 			# the homepage
+			render layout: 'swell_media/homepage'
 		end
 
 	end
