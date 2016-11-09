@@ -34,11 +34,24 @@ Getting Started
 	$ rake db:setup
 * run rails app, go to http://localhost:3000/
 * update your swell_media configuration (config/initializers/swell_media.rb)
+* setup CDN for static assets
+
+    Cloudfront (https://devcenter.heroku.com/articles/using-amazon-cloudfront-cdn)
+	# config/environments/production.rb
+  	config.action_controller.asset_host = "<YOUR DISTRIBUTION SUBDOMAIN>.cloudfront.net"
+
+  	OR
+
+  	CloudFlare
+  	https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-
+
 
 Optional
 * Configure Carrierwave S3 parameters, for asset management.
 	AMZN_ASOC_KEY, AMZN_ASOC_SECRET, FOG_DIRECTORY (bucket, e.g. 'shopswell-com-dev'), ASSET_HOST (if using cloudfront or similar)
-
+* If using amazon, you may want to try setting it up to use CloudFare's free CDN caching (to reduce bandwidth costs)
+	https://support.cloudflare.com/hc/en-us/articles/200168926-How-do-I-use-CloudFlare-with-Amazon-s-S3-Service-
+	https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
@@ -46,10 +59,11 @@ Please feel free to use a different markup language if you do not plan to run
 
 
 Files I generated
-app/controllers/application.rb
+app/controllers/application_controller.rb
 app/models/user.rb
 config/initializers/carrierwave.rb
 config/initializers/devise.rb
+config/initializers/swell_media.rb
 
 Files I modified
 config/database.yml
@@ -64,4 +78,3 @@ app/views/layouts/swell_media/pages.html.haml
 app/views/layouts/application.html.haml
 app/views/layouts/session.html.haml
 app/views/swell_media/static/home.html.haml
-config/initializers/swell_media.rb
